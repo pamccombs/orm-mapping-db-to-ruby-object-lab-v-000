@@ -19,7 +19,7 @@ class Student
      
     DB[:conn].execute(sql,name).map do |row|
       self.new_from_db(row)
-      break when row == 1
+      break if row == 1
     end
   end
   
