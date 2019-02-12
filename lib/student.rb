@@ -15,7 +15,10 @@ class Student
   end
 
   def self.find_by_name(name)
-    
+     SELECT *
+      FROM students
+      WHERE name = ?
+      LIMIT 1
   end
   
   def save
